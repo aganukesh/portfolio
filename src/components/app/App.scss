@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html {
+  background-color: #000000;
+}
+
+#Naga_Portfolio {
+  font-family: 'Comfortaa', cursive;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background: #000000;
+  color: #ccc;
+  letter-spacing: .5px;
+
+  .rcs-custom-scroll .rcs-inner-handle {
+    background-color: rgba(200, 200, 200, 0.7);
+  }
+}
+
+.loader-text {
+  font-size: 24px;
+  text-align: center;
+  top: calc(50vh - 10px);
+  left: 0;
+  right: 0;
+  margin: auto;
+  line-height: 20px;
+  transition-duration: .5s;
+  position: absolute;
+}
+
+#Naga_Portfolio.mobile .loader-text {
+  font-size: 60px;
+  line-height: 50px;
+}
+
+.ready {
+  .loader-text {
+    opacity: 0;
+  }
+}
+
+.btn-outlined {
+  border: 2px solid #ccc;
+  background: transparent;
+  color: #ccc;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  background: linear-gradient(to left, transparent 50%, #ccc 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease;
+}
+
+.btn-outlined:hover {
+  background-position: left bottom;
+  color: #000000;
+}
+
+.btn {
+  padding: 8px 15px;
+  font-family: inherit;
+  font-size: 12px;
+  background-color: #348bfb;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn:active,
+.btn:focus,
+.btn-outlined:active,
+.btn-outlined:focus {
+  outline: 0px solid;
+}
+
+.btn:hover {
+  box-shadow: 0 0 6px 0 #999;
+}
+
+@media (max-width: 500px) {
+  .loader-text {
+    font-size: 16px;
+  }
+}

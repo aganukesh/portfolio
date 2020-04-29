@@ -1,0 +1,267 @@
+.get-started {
+    position: fixed;
+    opacity: 0;
+    z-index: 1;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+    height: calc(100% - 45px);
+    width: 100%;
+    bottom: 0;
+
+    .rcs-inner-container > div {
+        position: relative;
+    }
+
+    .intro-text {
+        transition-duration: .5s;
+        transition-delay: 0.5s;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .divider-1,
+    .divider-2 {
+        transition-duration: .5s;
+        transition-delay: 0.5s;
+        transform: translateX(-250px);
+    }
+
+    .tag-1, .tag-2, .tag-3 {
+        transition-duration: .5s;
+        transition-delay: 0.5s;
+        transform: translateX(250px);
+    }
+
+    .tag-4, .get-started-btn {
+        transition-duration: .5s;
+        transition-delay: 0.5s;
+        transform: translateY(100px);
+    }
+
+    .about-me {
+        height: 100%;
+        transition-duration: .5s;
+        transition-delay: 0.5s;
+        opacity: 0;
+        z-index: 1;
+        position: absolute;
+        left: 30%;
+        top: 100px;
+        margin-right: 30px;
+        text-align: justify;
+        line-height: 30px;
+
+        li {
+            list-style: decimal;
+            margin-bottom: 20px;
+            line-height: 25px;
+            font-size: 14px;
+        }
+
+        .am-additional-notes {
+            margin-top: 40px;
+        }
+
+        .am-next-page {
+            text-align: center;
+            margin-top: 50px;
+
+            span {
+                font-size: 14px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.ready .get-started.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.ready .get-started.page1 {
+    .intro-text {
+        z-index: 2;
+        opacity: 1;
+    }
+
+    .divider-1,
+    .divider-2,
+    .tag-1, .tag-2, .tag-3,
+    .tag-4, .get-started-btn {
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+}
+
+.ready .get-started.page2 .about-me {
+    opacity: 1;
+    z-index: 2;
+}
+
+.gs-my-img {
+    position: fixed;
+    width: 30%;
+    bottom: -10px;
+}
+
+.intro-text {
+    position: absolute;
+    height: 100%;
+    left: 25%;
+    top: calc(50vh - 147px);
+    text-align: right;
+
+    .tag-1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .divider-1 {
+        height: .8px;
+        font-size: 22px;
+        margin-left: calc(100% - 65ch);
+        background-color: #ccc;
+        margin-bottom: 50px;
+    }
+
+    .tag-2 {
+        line-height: 30px;
+    }
+
+    .tag-3 {
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .divider-2 {
+        height: .8px;
+        background-color: #ccc;
+        margin-left: calc(100% - 60ch);
+        margin-bottom: 50px;
+    }
+
+    .tag-4 {
+        line-height: 30px;
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 100px;
+
+        .gs-highlight {
+            color: #1379f7;
+            font-weight: bold;
+        }
+    }
+
+    .get-started-btn {
+        margin-right: calc(50% - 106px);
+    }
+}
+
+@media(max-width:1400px) {
+    .intro-text {
+        top: 160px;
+        left: 0;
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 900px) {
+    .gs-my-img {
+        width: 30%;
+    }
+    
+    .intro-text {
+        top: 0px;
+        left: 25%;
+        width: 75%;
+
+        .rcs-inner-container > div {
+            padding: 20px;
+            // padding-right: 37px;
+            box-sizing: border-box;
+        }
+
+        .tag-1 {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .tag-2,
+        .tag-3 {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .tag-4 {
+            margin-top: 40px;
+            font-size: 18px;
+            text-align: right;
+        }
+
+        .divider-1,
+        .divider-2 {
+            margin-left: 0px;
+        }
+
+        .get-started-btn {
+            margin-right: 0;
+            padding: 8px 15px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .get-started .about-me {
+        left: 30%;
+        top: 0px;
+        margin-right: 0px;
+        line-height: 20px;
+        font-size: 14px;
+
+        .rcs-inner-container > div {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .am-title {
+            padding-top: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        .am-next-page {
+            margin-bottom: 40px;
+
+            .btn-outlined {
+                margin-right: 0;
+                padding: 8px 15px;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .gs-my-img {
+        width: 50%;
+    }
+
+    .intro-text {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) and (min-height: 600px) {
+    .gs-my-img {
+        width: 60%;
+    }
+}

@@ -1,0 +1,98 @@
+.header-nav {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    border-bottom: 0.8px solid #ccc;
+    font-size: 14px;
+    transform: translateY(-45px);
+    transition-duration: .5s;
+    transition-delay: .5s;
+    background-color: #000;
+
+    .floating-menu {
+        display: none;
+    }
+
+    .hn-tab {
+        display: inline-block;
+        margin: 3px 20px 0;
+        line-height: 38px;
+        cursor: pointer;
+        transition-duration: .5s;
+        border-bottom: 3px solid transparent;
+    }
+
+    .hn-tab:hover {
+        color: #1379f7;
+    }
+
+    .hn-tab.active {
+        color: #1379f7;
+        border-bottom: 3px solid #1379f7;
+    }
+}
+
+.header-nav.active {
+    transform: translateY(0);
+}
+
+@media (max-width: 500px) {
+    .header-nav {
+        text-align: center;
+        
+        .hn-tab {
+            display: none;
+        }
+
+        .floating-menu {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            text-align: left;
+
+            .material-icons {
+                color: #ccc;
+                font-size: 32px;
+                height: 32px;
+                width: 32px;
+                margin-top: 4px;
+                margin-left: 10px;
+                cursor: pointer;
+                transition-duration: .5s;
+            }
+
+            .fm-tabs-list {
+                // width: 0px;
+                height: 0px;
+                overflow: hidden;
+                transition-duration: .5s;
+                text-align: center;
+
+                .fm-tab {
+                    padding: 5px 0px;
+                    margin: 10px 50px;
+                    cursor: pointer;
+                    transition-duration: .5s;
+                    border-bottom: 3px solid transparent;
+                }
+
+                .fm-tab:hover, .fm-tab.active {
+                    color: #1379f7;
+                    border-bottom: 3px solid #1379f7;
+                }
+            }
+        }
+
+        .floating-menu:hover .material-icons  {
+            color: #1379f7;
+        }
+
+        .floating-menu.active {
+            
+            .fm-tabs-list {
+                // width: 100%;
+                height: 160px;
+            }
+        }
+    }
+}
